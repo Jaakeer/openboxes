@@ -331,8 +331,9 @@ class CreateStockMovement extends Component {
           },
         }}
         render={({ form: { mutators }, handleSubmit, values }) => (
-          <form className="create-form" onSubmit={handleSubmit}>
-            {_.map(
+          <form onSubmit={handleSubmit}>
+            <div className="classic-form">
+              {_.map(
               FIELDS,
               (fieldConfig, fieldName) => renderFormField(fieldConfig, fieldName, {
                 stocklists: this.state.stocklists,
@@ -345,7 +346,8 @@ class CreateStockMovement extends Component {
                 debouncedLocationsFetch: this.debouncedLocationsFetch,
               }),
             )}
-            <div>
+            </div>
+            <div className="submit-buttons">
               <button type="submit" className="btn btn-outline-primary float-right btn-xs">
                 <Translate id="react.default.button.next.label" defaultMessage="Next" />
               </button>

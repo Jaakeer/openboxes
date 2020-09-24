@@ -11,6 +11,7 @@ import Wizard from '../wizard/Wizard';
 import apiClient from '../../utils/apiClient';
 import { showSpinner, hideSpinner, fetchTranslations } from '../../actions';
 import { translateWithDefaultMessage } from '../../utils/Translate';
+import './StockMovement.scss';
 
 // TODO: Cleanup not required code
 // TODO: Revise docs
